@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  author: Armando Lüscher
+  description: Install and run Apt-Cacher NG on a Debian-like system.
+  license: MIT
+  min_ansible_version: 2.0.0.0
+  platforms:
+    - name: Ubuntu
+      versions:
+        - precise
+        - trusty
+        - xenial
+    - name: Debian
+      versions:
+        - wheezy
+        - jessie
+  galaxy_tags:
+    - apt
+    - package
+    - install
+    - update
+    - cache
+    - caching
+dependencies: []

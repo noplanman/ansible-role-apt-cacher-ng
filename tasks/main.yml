@@ -1,0 +1,10 @@
+---
+- include: install.yml
+  tags: apt-cacher-ng:install
+  when: apt_cacher_ng_server is not defined
+- include: configure.yml
+  tags: apt-cacher-ng:configure
+  when: apt_cacher_ng_server is not defined
+- include: client.yml
+  tags: apt-cacher-ng:client
+  when: apt_cacher_ng_server is defined

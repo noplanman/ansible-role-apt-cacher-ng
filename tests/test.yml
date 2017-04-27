@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+  become: yes
+  roles: [../../]
+  vars:
+    apt_cacher_ng_bind_address: "127.0.0.1"
+    apt_cacher_ng_port: "5555"
+    apt_cacher_ng_report_page: "report-page.html"
+  post_tasks:
+    - name: Check if Apt-Cacher NG is running
+      uri: url="http://127.0.0.1:5555/report-page.html"

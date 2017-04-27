@@ -1,0 +1,22 @@
+# {{ ansible_managed }}
+
+BindAddress: {{ apt_cacher_ng_bind_address }}
+CacheDir: {{ apt_cacher_ng_cache_dir }}
+ExTreshold: {{ apt_cacher_ng_ex_treshold }}
+LocalDirs: {{ apt_cacher_ng_local_dirs }}
+LogDir: {{ apt_cacher_ng_log_dir }}
+PidFile: {{ apt_cacher_ng_pid_file }}
+Port: {{ apt_cacher_ng_port }}
+Remap-debrep: {{ apt_cacher_ng_remap_debrep }} # Debian Archives
+Remap-uburep: {{ apt_cacher_ng_remap_uburep }} # Ubuntu Archives
+Remap-alxrep: {{ apt_cacher_ng_remap_alxrep }} # Arch Linux
+Remap-fedora: {{ apt_cacher_ng_remap_fedora }} # Fedora Linux
+Remap-epel:   {{ apt_cacher_ng_remap_epel }} # Fedora EPEL
+Remap-slrep:  {{ apt_cacher_ng_remap_slrep }} # Scientific Linux
+Remap-gentoo: {{ apt_cacher_ng_remap_gentoo }} # Gentoo Archives
+ReportPage: {{ apt_cacher_ng_report_page }}
+SupportDir: {{ apt_cacher_ng_support_dir }}
+VerboseLog: {{ apt_cacher_ng_verbose_log }}
+{% if apt_cacher_ng_proxy is defined %}
+Proxy: {{ apt_cacher_ng_proxy }}
+{% endif %}
