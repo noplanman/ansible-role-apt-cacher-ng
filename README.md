@@ -84,7 +84,7 @@ MIT
 
 [travis-build-status]: https://img.shields.io/travis/noplanman/ansible-role-apt-cacher-ng.svg?style=flat-square "Travis-CI Build Status"
 [travis-tests]: https://travis-ci.org/noplanman/ansible-role-apt-cacher-ng "Travis-CI Tests"
-[ansible-role-shield]: https://img.shields.io/ansible/role/17388.svg?style=flat-square "Apt Cacher NG on Ansible Galaxy"
+[ansible-role-shield]: https://img.shields.io/ansible/role/40118.svg?style=flat-square "Apt Cacher NG on Ansible Galaxy"
 [ansible-role]: https://galaxy.ansible.com/noplanman/apt_cacher_ng "Apt Cacher NG on Ansible Galaxy"
 [git.feneas.org]: https://git.feneas.org/noplanman/ansible-role-apt-cacher-ng "Ansible Role Apt Cacher NG on Feneas"
 [Apt-Cacher NG]: https://www.unix-ag.uni-kl.de/~bloch/acng/ "Apt-Cacher NG"
