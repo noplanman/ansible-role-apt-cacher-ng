@@ -3,7 +3,7 @@
 # apt_cacher_ng_server: "1.1.1.1"
 
 # Define this if you'd like to use the backports version.
-# (you must have the jessie-backports ource installed).
+# (you must have the jessie-backports source installed).
 # apt_cacher_ng_default_release: jessie-backports
 
 apt_cacher_ng_bind_address: "0.0.0.0"

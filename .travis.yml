@@ -1,38 +1,25 @@
-sudo: required
-dist: trusty
-
-language: python
-python: "2.7"
+---
+services: docker
 
 env:
-  - ANSIBLE_VERSION=latest
-  - ANSIBLE_VERSION=2.1.0.0
-  - ANSIBLE_VERSION=2.0.2.0
-  - ANSIBLE_VERSION=2.0.0.0
-
-before_install:
-  - sudo apt-get update -qq
-
-install:
-  # Install ansible.
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install --no-binary ansible ansible; else pip install --no-binary ansible ansible==$ANSIBLE_VERSION; fi
-
-  # Check ansible version.
-  - ansible --version
+  - distro: ubuntu1804
+  - distro: ubuntu1604
+  - distro: ubuntu1404
+  - distro: ubuntu1204
+  - distro: debian9
+  - distro: debian8
 
 script:
-  # Check the role/playbook's syntax.
-  - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+  # Configure test script so we can run extra tests after playbook is run.
+  - export container_id=$(date +%s)
+  - export cleanup=false
 
-  # Run the role/playbook with ansible-playbook.
-  - ansible-playbook -i tests/inventory tests/test.yml -vvvv
+  # Download test shim.
+  - wget -O ${PWD}/tests/test.sh https://gist.githubusercontent.com/noplanman/40e96f31ee2301469769d4236aff40e2/raw/
+  - chmod +x ${PWD}/tests/test.sh
 
-  # Run the role/playbook again, checking to make sure it's idempotent.
-  - >
-    ansible-playbook -i tests/inventory tests/test.yml
-    | grep -q 'changed=0.*failed=0'
-    && (echo 'Idempotence test: pass' && exit 0)
-    || (echo 'Idempotence test: fail' && exit 1)
+  # Run tests.
+  - ${PWD}/tests/test.sh
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/

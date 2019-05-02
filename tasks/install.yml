@@ -1,7 +1,7 @@
 ---
 - name: Update sources
-  apt: update_cache=yes cache_valid_time=86400
-  changed_when: no
+  apt: update_cache=true cache_valid_time=86400
+  changed_when: false
 
 - name: Install apt-cacher-ng
   apt:
