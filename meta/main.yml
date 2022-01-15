@@ -7,7 +7,7 @@ galaxy_info:
   author: Armando Lüscher
   license: MIT
   min_ansible_version: 2.0.0.0
-  issue_tracker_url: https://git.feneas.org/noplanman/ansible-role-apt-cacher-ng/issues
+  issue_tracker_url: https://gitlab.com/noplanman/ansible-role-apt-cacher-ng/issues
   platforms:
     - name: Ubuntu
       versions:

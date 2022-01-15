@@ -4,9 +4,9 @@
 
 ---
 
-:rocket: Development has moved to **[git.feneas.org]**.
+:rocket: Development has moved to **[gitlab.com]**.
 
-(The repository on GitHub is only a mirror, so fork on Feneas to contribute. No registration needed, just sign in with your GitHub account.)
+(The repository on GitHub is only a mirror, so fork on GitLab to contribute.)
 
 ---
 
@@ -86,7 +86,7 @@ MIT
 [travis-tests]: https://travis-ci.org/noplanman/ansible-role-apt-cacher-ng "Travis-CI Tests"
 [ansible-role-shield]: https://img.shields.io/ansible/role/40118.svg?style=flat-square "Apt Cacher NG on Ansible Galaxy"
 [ansible-role]: https://galaxy.ansible.com/noplanman/apt_cacher_ng "Apt Cacher NG on Ansible Galaxy"
-[git.feneas.org]: https://git.feneas.org/noplanman/ansible-role-apt-cacher-ng "Ansible Role Apt Cacher NG on Feneas"
+[gitlab.com]: https://gitlab.com/noplanman/ansible-role-apt-cacher-ng "Ansible Role Apt Cacher NG on GitLab"
 [Apt-Cacher NG]: https://www.unix-ag.uni-kl.de/~bloch/acng/ "Apt-Cacher NG"
-[defaults]: https://git.feneas.org/noplanman/ansible-role-apt-cacher-ng/blob/master/defaults/main.yml "Default variables"
-[`tests`]: https://git.feneas.org/noplanman/ansible-role-apt-cacher-ng/tree/master/tests "Tests"
+[defaults]: https://gitlab.com/noplanman/ansible-role-apt-cacher-ng/blob/master/defaults/main.yml "Default variables"
+[`tests`]: https://gitlab.com/noplanman/ansible-role-apt-cacher-ng/tree/master/tests "Tests"
